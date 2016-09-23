@@ -6,24 +6,33 @@
   <script src="./libraries/p5.dom.js"></script> -->
   <script src="./libraries/jsfeat-min.js"></script>
   <script src="./libraries/utils.js"></script>
-  <style>*{
-    font-family: sans-serif;
-    body, html {font-family:sans-serif; background-color:#000000;}
-    div {width:80%; margin:auto; background-color:#ffffff; padding:5%; border:2px solid #990066; text-align:center; border-radius:10px;}
-    canvas {padding:5%; border:2px solid #330000; background-color:#660000; border-radius:10px;}
+  <style>
+
+
+    /*div {width:80%; margin:auto; background-color:#ffffff; padding:5%; border:2px solid #990066; text-align:center; border-radius:10px;}*/
+    canvas {padding:2%; border:2px solid #330000;}
+    #capturedPhoto {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        position: absolute;
+
+    }
 
 
 
-
-    }</style>
+    </style>
 </head>
 <body>
 <input type="file" accept="image/*" onchange="picChange(event)"/>
+<input type="button" onclick="findEdges()" value="Edge Detection"/>
 
 <p>
 Photo:
 </p>
-<canvas id="capturedPhoto" width="500" height="400">
+<canvas id="capturedPhoto" >
 </canvas>
 
   <script src="sketch.js"></script>
